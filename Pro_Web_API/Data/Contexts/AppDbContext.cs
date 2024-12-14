@@ -28,7 +28,7 @@ namespace Pro_Web_API.Data.Contexts
 
             modelBuilder.Entity<User>()
                 .Property(u => u.Id)
-                .ValueGeneratedOnAdd(); // Otomatik artış
+                .ValueGeneratedOnAdd(); 
 
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.email)
@@ -43,7 +43,7 @@ namespace Pro_Web_API.Data.Contexts
 
             modelBuilder.Entity<Category>()
                 .Property(u => u.Id)
-                .ValueGeneratedOnAdd(); // Otomatik artış
+                .ValueGeneratedOnAdd(); 
 
             modelBuilder.Entity<Category>()
                 .HasIndex(u => u.category_name)

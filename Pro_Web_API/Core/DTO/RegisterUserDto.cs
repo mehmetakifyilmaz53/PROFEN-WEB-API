@@ -9,4 +9,5 @@ namespace Pro_Web_API.Core.DTO
         public string Email { get; set; }
         public UserRole Role { get; set; }
     }
+
 }

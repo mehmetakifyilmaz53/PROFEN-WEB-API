@@ -24,7 +24,6 @@ namespace Pro_Web_API.Business.Concrete
         {
             var response = new ServiceResponse<User>();
 
-            // Kullanıcı adının benzersiz olup olmadığını kontrol et
             var existingUser = await _userRepository.GetByUsernameAsync(userDto.UserName);
             if (existingUser != null)
             {
@@ -61,17 +60,14 @@ namespace Pro_Web_API.Business.Concrete
                 response.Message = "Geçersiz rol tipi.";
                 return response;
             }
-
-            // Yeni kullanıcı nesnesi oluştur
             var user = new User
             {
                 user_Name = userDto.UserName,
-                password_Hash = HashPassword(userDto.PasswordHash),
+                password_Hash = PasswordHelper.HashPassword(userDto.PasswordHash),
                 email = userDto.Email,
                 role = userDto.Role
             };
 
-            // Yeni kullanıcıyı veritabanına ekle
             await _userRepository.AddAsync(user);
 
             response.Success = true;
@@ -80,27 +76,32 @@ namespace Pro_Web_API.Business.Concrete
             return response;
         }
 
-        public async Task<ServiceResponse<string>> LoginAsync(string username, string password)
+        public async Task<ServiceResponse<List<Dictionary<string, string>>>> LoginAsync(string username, string password)
         {
-            var response = new ServiceResponse<string>();
+            var response = new ServiceResponse<List<Dictionary<string, string>>>();
+            var tokenList = new List<Dictionary<string, string>>();
 
-            // Kullanıcı doğrulama
+
             var user = await _userRepository.GetByUsernameAsync(username);
-            if (user == null || !VerifyPassword(password, user.password_Hash))
+            if (user == null || !PasswordHelper.VerifyPassword(password, user.password_Hash))
             {
                 response.Success = false;
                 response.Message = "Geçersiz kullanıcı adı veya şifre.";
                 return response;
             }
 
-            // JWT token üretme (Örnek bir işlem)
-            var token = GenerateJwtToken(user);
+
+            var token = JWTToken.GenerateJwtToken(user);
+
+    
+            tokenList.Add(new Dictionary<string, string> { { "JWTToken", token } });
 
             response.Success = true;
-            response.Data = token;
+            response.Data = tokenList; 
             response.Message = "Giriş başarılı.";
             return response;
         }
+
 
         public async Task<ServiceResponse<User?>> GetUserByIdAsync(int id)
         {
@@ -126,13 +127,14 @@ namespace Pro_Web_API.Business.Concrete
 
             response.Success = true;
             response.Data = users;
+            response.Message = "Kullanıcılar getirildi.";
             return response;
         }
 
-        public async Task<ServiceResponse<bool>> UpdateUserAsync(User user)
+        public async Task<ServiceResponse<bool>> UpdateUserAsync(int id, UpdateUserDto userDto)
         {
             var response = new ServiceResponse<bool>();
-            var existingUser = await _userRepository.GetByIdAsync(user.Id);
+            var existingUser = await _userRepository.GetByIdAsync(id);
 
             if (existingUser == null)
             {
@@ -141,9 +143,58 @@ namespace Pro_Web_API.Business.Concrete
                 return response;
             }
 
-            existingUser.email = user.email;
-            existingUser.user_Name = user.user_Name;
-            existingUser.role = user.role;
+            if (userDto.Email != existingUser.email)
+            {
+                var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
+                if (existingUserByEmail != null && existingUserByEmail.Id != id)
+                {
+                    response.Success = false;
+                    response.Message = "E-posta adresi zaten mevcut.";
+                    return response;
+                }
+
+                if (!ValidationHelper.IsValidEmail(userDto.Email))
+                {
+                    response.Success = false;
+                    response.Message = "Geçersiz e-posta formatı.";
+                    return response;
+                }
+                existingUser.email = userDto.Email;
+            }
+
+            if (userDto.UserName != existingUser.user_Name)
+            {
+                var existingUserByUserName = await _userRepository.GetByUsernameAsync(userDto.UserName);
+                if (existingUserByUserName != null && existingUserByUserName.Id != id)
+                {
+                    response.Success = false;
+                    response.Message = "Kullanıcı adı zaten mevcut.";
+                    return response;
+                }
+                existingUser.user_Name = userDto.UserName;
+            }
+
+            if (!string.IsNullOrEmpty(userDto.PasswordHash))
+            {
+                if (!ValidationHelper.IsPasswordComplex(userDto.PasswordHash))
+                {
+                    response.Success = false;
+                    response.Message = "Şifreniz en az 8 karakterli olmalı, en az bir büyük harf, bir rakam ve özel karakter içermelidir.";
+                    return response;
+                }
+                existingUser.password_Hash = PasswordHelper.HashPassword(userDto.PasswordHash);
+            }
+
+            if (userDto.Role != existingUser.role)
+            {
+                if (!Enum.IsDefined(typeof(UserRole), userDto.Role))
+                {
+                    response.Success = false;
+                    response.Message = "Geçersiz rol tipi.";
+                    return response;
+                }
+                existingUser.role = userDto.Role;
+            }
 
             await _userRepository.UpdateAsync(existingUser);
 
@@ -173,51 +224,6 @@ namespace Pro_Web_API.Business.Concrete
             return response;
         }
 
-        //private string HashPassword(string password)
-        //{
-        //    using var sha256 = SHA256.Create();
-        //    var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-        //    return Convert.ToBase64String(hashedBytes);
-        //}
-
-        private string HashPassword(string password)
-        {
-            // Örnek olarak BCrypt kullanımı
-            return BCrypt.Net.BCrypt.HashPassword(password);
-        }
-
-        private bool VerifyPassword(string inputPassword, string storedHashedPassword)
-        {
-            // Hashlenmiş şifreyi doğrula
-            return BCrypt.Net.BCrypt.Verify(inputPassword, storedHashedPassword);
-        }
-
-
-        private string GenerateJwtToken(User user)
-        {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("b1f6c3f8e2d94b5eaef5ac39484c9476")); // Rastgele GUID
-
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            // Kullanıcı bilgileri ve rollerini içeren claims
-            var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, user.email),
-        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-        new Claim(ClaimTypes.Role, user.role.ToString()) // Kullanıcının rolü
-    };
-
-            // Token yapılandırması
-            var token = new JwtSecurityToken(
-                issuer: "localhost",               // Issuer
-                audience: "localhost",             // Audience
-                claims: claims,
-                expires: DateTime.Now.AddHours(1),   // Token geçerlilik süresi
-                signingCredentials: creds
-            );
-
-            // Token string'e dönüştürülür
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+      
     }
 }

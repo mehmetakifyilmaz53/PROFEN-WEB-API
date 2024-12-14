@@ -12,7 +12,7 @@ namespace Pro_Web_API.Data.Repositories
         {
             _context = context;
         }
-        public async Task SaveLogAsync(string controller, string action, string method, string path, string message, string roles, string response)
+        public async Task SaveLogAsync(string controller, string action, string method, string path, string message,string ipAddress,  string response)
         {
             var log = new ApiLog
             {
@@ -22,7 +22,7 @@ namespace Pro_Web_API.Data.Repositories
                 RequestPath = path,
                 LogTime = DateTime.Now.AddTicks(-(DateTime.Now.Ticks % TimeSpan.TicksPerSecond)),
                 Message = message,
-                Roles = roles,
+                IpAdresss = ipAddress,
                 Response = response
             };
 

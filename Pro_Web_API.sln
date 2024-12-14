@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PROFEN_WEB_API", "Pro_Web_API\PROFEN_WEB_API.csproj", "{82571A06-C83A-4032-A880-D825EF9C85DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pro_Web_API", "Pro_Web_API\Pro_Web_API.csproj", "{82571A06-C83A-4032-A880-D825EF9C85DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

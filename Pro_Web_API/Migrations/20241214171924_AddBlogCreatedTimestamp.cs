@@ -1,22 +1,43 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Pro_Web_API.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AddBlogCreatedTimestamp : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "ApiLogs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ControllerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ActionName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    HttpMethod = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RequestPath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LogTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Message = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IpAdresss = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Response = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ApiLogs", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Categories",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    category_name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    category_name = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -40,6 +61,12 @@ namespace Pro_Web_API.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Categories_category_name",
+                table: "Categories",
+                column: "category_name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Users_email",
                 table: "Users",
                 column: "email",
@@ -55,6 +82,9 @@ namespace Pro_Web_API.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ApiLogs");
+
             migrationBuilder.DropTable(
                 name: "Categories");
 

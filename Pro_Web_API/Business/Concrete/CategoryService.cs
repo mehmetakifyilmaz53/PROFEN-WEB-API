@@ -21,6 +21,7 @@ namespace Pro_Web_API.Business.Concrete
 
             response.Success = true;
             response.Data = categories;
+            response.Message = "Kategoriler getirildi";
             return response;
         }
 
@@ -28,7 +29,6 @@ namespace Pro_Web_API.Business.Concrete
         {
             var response = new ServiceResponse<Category>();
 
-            // Kullanıcı adının benzersiz olup olmadığını kontrol et
             var existingCategory = await _categoryRepository.GetByCategoryNameAsync(categoryDto.CategoryName);
             if (existingCategory != null)
             {
@@ -37,18 +37,17 @@ namespace Pro_Web_API.Business.Concrete
                 return response;
             }       
 
-            // Yeni kullanıcı nesnesi oluştur
             var category = new Category
             {
                 category_name = categoryDto.CategoryName,
             };
 
-            // Yeni kullanıcıyı veritabanına ekle
+
             await _categoryRepository.AddAsync(category);
 
             response.Success = true;
             response.Data = category;
-            response.Message = "Kategori başarıyla kaydedildi.";
+            response.Message = "Kategori kaydedildi.";
             return response;
         }
     }

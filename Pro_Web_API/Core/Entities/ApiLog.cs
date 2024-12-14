@@ -9,7 +9,7 @@
         public string RequestPath { get; set; }
         public DateTime LogTime { get; set; } = DateTime.Now;
         public string Message { get; set; }
-        public string Roles { get; set; } // Kullanıcı rolleri
+        public string IpAdresss { get; set; } // Kullanıcı rolleri
         public string Response { get; set; } // API'nin döndürdüğü cevap
     }
 

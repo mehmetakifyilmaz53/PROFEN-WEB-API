@@ -1,23 +1,32 @@
+using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 using Pro_Web_API.Business.Abstract;
 using Pro_Web_API.Business.Concrete;
 using Pro_Web_API.Data.Contexts;
 using Pro_Web_API.Data.Repositories;
 using Pro_Web_API.WebAPI.Middlewares;
+using System.Reflection;
 using System.Text;
 using static Pro_Web_API.Data.Contexts.MongoDbContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pro_Web_API", Version = "v1" });
+
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath); 
+
+    c.EnableAnnotations();
 
     // JWT Bearer Security Tanýmý
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -45,16 +54,25 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
 builder.Services.AddDbContext<AppDbContext>();
-builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IApiLogRepository, ApiLogRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+
+builder.Services.AddMemoryCache();
+builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
+builder.Services.AddInMemoryRateLimiting();
+builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
 
 
-// Add Authentication and JWT configuration
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -78,9 +96,9 @@ builder.Services.AddAuthentication(options =>
     {
         OnChallenge = async context =>
         {
-            context.HandleResponse(); // Varsayýlan yanýtý engelle
+            context.HandleResponse();
 
-            // Özel yanýt oluþtur
+    
             context.Response.StatusCode = StatusCodes.Status401Unauthorized;
             context.Response.ContentType = "application/json";
 
@@ -97,7 +115,6 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -105,12 +122,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseMiddleware<CustomForbiddenMiddleware>();
 app.UseMiddleware<ApiLoggingMiddleware>();
-
-
-// Enable Authentication and Authorization middlewares
-app.UseAuthentication(); // Bu middleware'i eklemek önemli!
+app.UseIpRateLimiting();
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();

@@ -221,3 +221,8 @@ C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\obj\Debug\net8.
 C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\obj\Debug\net8.0\Pro_Web_API.pdb
 C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\obj\Debug\net8.0\Pro_Web_API.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\obj\Debug\net8.0\ref\Pro_Web_API.dll
+C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\bin\Debug\net8.0\Pro_Web_API.xml
+C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\obj\Debug\net8.0\Pro_Web_API.xml
+C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\bin\Debug\net8.0\AspNetCoreRateLimit.dll
+C:\Users\Administrator\Desktop\uskon\Pro-API-Projesi\Pro_Web_API\bin\Debug\net8.0\Newtonsoft.Json.dll

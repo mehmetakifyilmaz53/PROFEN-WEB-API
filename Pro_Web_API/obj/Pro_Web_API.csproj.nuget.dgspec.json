@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\Profen APı Projesi\\Pro_Web_API\\Pro_Web_API.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Pro_Web_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\Profen APı Projesi\\Pro_Web_API\\Pro_Web_API.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Pro_Web_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Profen APı Projesi\\Pro_Web_API\\Pro_Web_API.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Pro_Web_API.csproj",
         "projectName": "Pro_Web_API",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Profen APı Projesi\\Pro_Web_API\\Pro_Web_API.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Pro_Web_API.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Profen APı Projesi\\Pro_Web_API\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AspNetCoreRateLimit": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
@@ -79,6 +83,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             }
           },
           "imports": [

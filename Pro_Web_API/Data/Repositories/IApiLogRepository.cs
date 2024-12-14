@@ -4,6 +4,6 @@ namespace Pro_Web_API.Data.Repositories
 {
     public interface IApiLogRepository
     {
-        Task SaveLogAsync(string controller, string action, string method, string path, string message, string roles, string response);
+        Task SaveLogAsync(string controller, string action, string method, string path, string message, string ipAddress, string response);
     }
 }

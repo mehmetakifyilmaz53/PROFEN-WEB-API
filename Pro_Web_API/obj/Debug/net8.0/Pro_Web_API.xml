@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pro_Web_API</name>
+    </assembly>
+    <members>
+        <member name="T:Pro_Web_API.Migrations.AddBlogCreatedTimestamp">
+            <inheritdoc />
+        </member>
+        <member name="M:Pro_Web_API.Migrations.AddBlogCreatedTimestamp.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Pro_Web_API.Migrations.AddBlogCreatedTimestamp.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Pro_Web_API.Migrations.AddBlogCreatedTimestamp.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.CategoryController.Register(Pro_Web_API.Core.DTO.RegisterCategoryDto)">
+            <summary>
+            Kategori kayıt işlemi.
+            </summary>
+            <param name="categoryDto">Kategori kayıt bilgileri.</param>
+            <returns>Başarılı kayıt sonucu veya hata mesajı döndürür.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.CategoryController.GetAllCategories">
+            <summary>
+            Bütün kategorileri getirme işlemi.
+            </summary>
+            <returns>Bütün kategorileri getirir.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.Register(Pro_Web_API.Core.DTO.RegisterUserDto)">
+            <summary>
+            Kullanıcı kayıt işlemi.
+            </summary>
+            <param name="userDto">Kullanıcı kayıt bilgileri.</param>
+            <returns>Başarılı kayıt sonucu veya hata mesajı döndürür.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.Login(Pro_Web_API.Core.DTO.LoginUserDto)">
+            <summary>
+            Kullanıcı giriş işlemi.
+            </summary>
+            <param name="userDto">Kullanıcı giriş bilgileri.</param>
+            <returns>Başarılı giriş sonucu kullanıcı bilgileri ve JWT Token döndürür.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.GetUserById(System.Int32)">
+            <summary>
+            ID'ye göre Kullanıcı getirme işlemi.
+            </summary>
+            <param name="id">Kullanıcı ID bilgisi.</param>
+            <returns>Id'ye göre kullanıcı bilgilerini getirir.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.GetAllUsers">
+            <summary>
+            Bütün kullanıcıları listeleme işlemi.
+            </summary>
+            <param>Kullanıcı kayıt bilgileri.</param>
+            <returns>Başarılı giriş sonucu kullanıcı bilgileri ve JWT Token döndürür.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.UpdateUser(System.Int32,Pro_Web_API.Core.DTO.UpdateUserDto)">
+            <summary>
+            Kullanıcı bilgileri güncelleme işlemi.
+            </summary>
+            <param name="id">Kullanıcı ID bilgisi.</param>
+            <param name="userDto">Kullanıcı biglileri.</param>
+            <returns>Kullanıcı bilgilerini günceller</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Kullanıcı silme işlemi.
+            </summary>
+            <param name="id">Kullanıcı ID bilgisi.</param>
+            <returns>Kullanıcıyı sistemden siler</returns>
+        </member>
+    </members>
+</doc>

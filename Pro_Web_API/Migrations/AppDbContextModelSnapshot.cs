@@ -42,6 +42,10 @@ namespace Pro_Web_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IpAdresss")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("LogTime")
                         .HasColumnType("datetime2");
 
@@ -54,10 +58,6 @@ namespace Pro_Web_API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Response")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Roles")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

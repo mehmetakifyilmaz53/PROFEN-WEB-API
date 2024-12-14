@@ -12,8 +12,8 @@ using Pro_Web_API.Data.Contexts;
 namespace Pro_Web_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241214093005_AddCateogryIndex")]
-    partial class AddCateogryIndex
+    [Migration("20241214171924_AddBlogCreatedTimestamp")]
+    partial class AddBlogCreatedTimestamp
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,10 @@ namespace Pro_Web_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IpAdresss")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("LogTime")
                         .HasColumnType("datetime2");
 
@@ -57,10 +61,6 @@ namespace Pro_Web_API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Response")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Roles")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
