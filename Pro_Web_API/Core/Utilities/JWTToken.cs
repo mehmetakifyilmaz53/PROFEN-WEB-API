@@ -17,7 +17,7 @@ namespace Pro_Web_API.Core.Utilities
             // Kullanıcı bilgileri ve rollerini içeren claims
             var claims = new List<Claim>
     {
-        new Claim(ClaimTypes.Name, user.email),
+        new Claim(ClaimTypes.Name, user.user_Name),
         new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
         new Claim(ClaimTypes.Role, user.role.ToString()) // Kullanıcının rolü
     };

@@ -100,8 +100,6 @@ namespace Pro_Web_API.Business.Concrete
 
         public async Task<ServiceResponse<List<Product>>> GetAllProductsAsync()
         {
-
-
             try
             {
                 var products = await _productRepository.GetAllAsync();

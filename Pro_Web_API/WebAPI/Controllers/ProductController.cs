@@ -36,9 +36,14 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpPost("add")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")] // Admin ve Manager rolleri için erişim
         public async Task<IActionResult> AddProduct([FromBody] RegisterProductDto productDto)
         {
+            if (!User.IsInRole("Admin") && !User.IsInRole("Manager"))
+            {
+                return Forbid(); // Yeterli yetkiye sahip olmayan kullanıcılar için
+            }
+
             var result = await _productService.CreateProductAsync(productDto);
             if (!result.Success) return BadRequest(result);
 
@@ -60,9 +65,15 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpPut("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] RegisterProductDto productDto)
         {
+            // Manual role kontrolü
+            if (!User.IsInRole("Admin") && !User.IsInRole("Manager"))
+            {
+                return Forbid();
+            }
+
             var response = await _productService.UpdateProductAsync(id, productDto);
             if (!response.Success)
             {
@@ -87,7 +98,7 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var response = await _productService.DeleteProductAsync(id);
@@ -113,7 +124,7 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpGet("{id}")]
-        //[Authorize(Roles = "Admin,Manager,Viewer")]
+        [Authorize(Roles = "Admin,Manager,Viewer")]
         public async Task<IActionResult> GetProductById(int id)
         {
             var response = await _productService.GetProductByIdAsync(id);
@@ -138,7 +149,7 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpGet]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllProducts()
         {
             var response = await _productService.GetAllProductsAsync();

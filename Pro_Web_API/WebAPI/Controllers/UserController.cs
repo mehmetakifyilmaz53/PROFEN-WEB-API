@@ -87,6 +87,8 @@ namespace Pro_Web_API.WebAPI.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetUserById(int id)
         {
+            if (!User.IsInRole("Admin")) // Manuel role kontrolü
+                return Forbid();
             var response = await _userService.GetUserByIdAsync(id);
             if (!response.Success)
             {
@@ -138,6 +140,8 @@ namespace Pro_Web_API.WebAPI.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UpdateUserDto userDto)
         {
+            if (!User.IsInRole("Admin")) // Manuel role kontrolü
+                return Forbid();
             var response = await _userService.UpdateUserAsync(id, userDto);
             if (!response.Success)
             {
@@ -164,6 +168,8 @@ namespace Pro_Web_API.WebAPI.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            if (!User.IsInRole("Admin")) // Manuel kontrol
+                return Forbid();
             var response = await _userService.DeleteUserAsync(id);
             if (!response.Success)
             {
