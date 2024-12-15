@@ -6,7 +6,7 @@ namespace Pro_Web_API.Core.DTO
     {
         public string ProductName { get; set; }
         public string Description { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         public int Quantity { get; set; }
         public string Category { get; set; }
     }

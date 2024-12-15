@@ -17,11 +17,18 @@ namespace Pro_Web_API.Business.Concrete
         public async Task<ServiceResponse<List<Category>>> GetAllCategoriesAsync()
         {
             var response = new ServiceResponse<List<Category>>();
-            var categories = await _categoryRepository.GetAllAsync();
-
-            response.Success = true;
-            response.Data = categories;
-            response.Message = "Kategoriler getirildi";
+            try
+            {
+                var categories = await _categoryRepository.GetAllAsync();
+                response.Success = true;
+                response.Data = categories;
+                response.Message = "Kategoriler getirildi";
+            }
+            catch (AppException ex)
+            {
+                response.Success = false;
+                response.Message = ex.Message;
+            }
             return response;
         }
 
@@ -29,25 +36,32 @@ namespace Pro_Web_API.Business.Concrete
         {
             var response = new ServiceResponse<Category>();
 
-            var existingCategory = await _categoryRepository.GetByCategoryNameAsync(categoryDto.CategoryName);
-            if (existingCategory != null)
+            try
+            {
+                var existingCategory = await _categoryRepository.GetByCategoryNameAsync(categoryDto.CategoryName);
+                if (existingCategory != null)
+                {
+                    response.Success = false;
+                    response.Message = "Kategori adı zaten mevcut.";
+                    return response;
+                }
+
+                var category = new Category
+                {
+                    category_name = categoryDto.CategoryName,
+                };
+
+                await _categoryRepository.AddAsync(category);
+
+                response.Success = true;
+                response.Data = category;
+                response.Message = "Kategori kaydedildi.";
+            }
+            catch (AppException ex)
             {
                 response.Success = false;
-                response.Message = "Kategori adı zaten mevcut.";
-                return response;
-            }       
-
-            var category = new Category
-            {
-                category_name = categoryDto.CategoryName,
-            };
-
-
-            await _categoryRepository.AddAsync(category);
-
-            response.Success = true;
-            response.Data = category;
-            response.Message = "Kategori kaydedildi.";
+                response.Message = ex.Message;
+            }
             return response;
         }
     }

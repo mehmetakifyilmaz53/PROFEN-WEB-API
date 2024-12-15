@@ -29,6 +29,41 @@
             </summary>
             <returns>Bütün kategorileri getirir.</returns>
         </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.ProductController.AddProduct(Pro_Web_API.Core.DTO.RegisterProductDto)">
+            <summary>
+            Ürün ekleme işlemi.
+            </summary>
+            <param name="productDto">Ürün bilgleri.</param>
+            <returns>Ürün ekler</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.ProductController.UpdateProduct(System.Int32,Pro_Web_API.Core.DTO.RegisterProductDto)">
+            <summary>
+            Ürün bilgilerini güncelleme işlemi.
+            </summary>
+            <param name="id">Ürün Mongo ID bilgisi.</param>
+            <param name="productDto">Ürün bilgileri.</param>
+            <returns>Ürün bilgilerini günceller</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.ProductController.DeleteProduct(System.Int32)">
+            <summary>
+            Ürün silme işlemi.
+            </summary>
+            <param name="id">Ürün ID bilgisi.</param>
+            <returns>Ürünü sistemden siler</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.ProductController.GetProductById(System.Int32)">
+            <summary>
+            ID'ye göre ürün getirme işlemi.
+            </summary>
+            <param name="id">Ürün ID bilgisi.</param>
+            <returns>Id'ye göre ürün bilgilerini getirir.</returns>
+        </member>
+        <member name="M:Pro_Web_API.WebAPI.Controllers.ProductController.GetAllProducts">
+            <summary>
+            Bütün ürünleri listeleme işlemi.
+            </summary>
+            <returns>Başarılı giriş sonucu kullanıcı bilgileri ve JWT Token döndürür.</returns>
+        </member>
         <member name="M:Pro_Web_API.WebAPI.Controllers.UserController.Register(Pro_Web_API.Core.DTO.RegisterUserDto)">
             <summary>
             Kullanıcı kayıt işlemi.

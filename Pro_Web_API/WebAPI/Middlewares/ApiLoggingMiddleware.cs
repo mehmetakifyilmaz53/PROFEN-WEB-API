@@ -68,7 +68,7 @@ namespace Pro_Web_API.WebAPI.Middlewares
 
 
 
-                if ((controllerName == "User" || controllerName == "Category") && (actionName == "Register" || actionName == "Login" || actionName == "DeleteUser" || actionName == "UpdateUser" )) 
+                if ((controllerName == "User" || controllerName == "Category" || controllerName == "Product") && (actionName == "Register" || actionName == "Login" || actionName == "DeleteUser" || actionName == "UpdateUser" || actionName == "DeleteProduct" || actionName == "AddProduct")) 
                 {
                     var controllerType = Assembly.GetExecutingAssembly()
 .GetTypes()

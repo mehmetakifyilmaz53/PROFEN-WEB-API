@@ -1,5 +1,6 @@
 using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -10,6 +11,7 @@ using Pro_Web_API.Business.Concrete;
 using Pro_Web_API.Data.Contexts;
 using Pro_Web_API.Data.Repositories;
 using Pro_Web_API.WebAPI.Middlewares;
+using StackExchange.Redis;
 using System.Reflection;
 using System.Text;
 using static Pro_Web_API.Data.Contexts.MongoDbContext;
@@ -63,13 +65,17 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddSingleton<CacheService>();
+
 
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
 
 builder.Services.AddMemoryCache();
 builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
 builder.Services.AddInMemoryRateLimiting();
-builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>(); 
+
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(builder.Configuration["Redis:ConnectionString"]));
 
 
 
@@ -121,8 +127,31 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseExceptionHandler(appBuilder =>
+{
+    appBuilder.Run(async context =>
+    {
+        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+        context.Response.ContentType = "application/json";
+
+        var exception = context.Features.Get<IExceptionHandlerFeature>();
+        if (exception != null)
+        {
+            var response = new
+            {
+                success = false,
+                message = "Sunucu hatasý meydana geldi.",
+                details = exception.Error.Message
+            };
+
+            await context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(response));
+        }
+    });
+});
+
+
 app.UseHttpsRedirection();
-app.UseMiddleware<ApiLoggingMiddleware>();
+app.UseMiddleware<CustomForbiddenMiddleware>();
 app.UseIpRateLimiting();
 app.UseAuthentication(); 
 app.UseAuthorization();

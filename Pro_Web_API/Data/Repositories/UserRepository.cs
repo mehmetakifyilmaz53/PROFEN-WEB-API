@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Pro_Web_API.Business.Concrete;
 using Pro_Web_API.Core.Entities;
 using Pro_Web_API.Data.Contexts;
 
@@ -15,40 +16,92 @@ namespace Pro_Web_API.Data.Repositories
 
         public async Task<User?> GetByIdAsync(int id)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            try
+            {
+                return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı işlemi sırasında hata oluştu.", 500);
+            }
         }
 
         public async Task<User?> GetByUsernameAsync(string username)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.user_Name == username);
+            try
+            {
+                return await _context.Users.FirstOrDefaultAsync(u => u.user_Name == username);
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı işlemi sırasında hata oluştu.", 500);
+            }
         }
 
         public async Task<List<User>> GetAllAsync()
         {
-            return await _context.Users.ToListAsync();
+            try
+            {
+                return await _context.Users.ToListAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı işlemi sırasında hata oluştu.", 500);
+            }
         }
 
         public async Task AddAsync(User user)
         {
-            await _context.Users.AddAsync(user);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı ekleme işlemi sırasında hata oluştu.", 500);
+            }
         }
 
         public async Task UpdateAsync(User user)
         {
-            _context.Users.Update(user);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı güncelleme işlemi sırasında hata oluştu.", 500);
+            }
+
         }
 
         public async Task DeleteAsync(User user)
         {
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+
+            try
+            {
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı silme işlemi sırasında hata oluştu.", 500);
+            }
         }
 
         public async Task<User?> GetByEmailAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.email == email);
+
+            try
+            {
+                return await _context.Users.FirstOrDefaultAsync(u => u.email == email);
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new AppException("Veritabanı işlemi sırasında hata oluştu.", 500);
+            }
         }
     }
 }

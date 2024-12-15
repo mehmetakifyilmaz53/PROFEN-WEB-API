@@ -9,7 +9,7 @@ namespace Pro_Web_API.Business.Abstract
         Task<ServiceResponse<Product>> CreateProductAsync(RegisterProductDto productDto);
         Task<ServiceResponse<Product?>> GetProductByIdAsync(int id);
         Task<ServiceResponse<List<Product>>> GetAllProductsAsync();
-        Task<ServiceResponse<bool>> UpdateProductAsync(int id, UpdateUserDto userDto);
+        Task<ServiceResponse<bool>> UpdateProductAsync(int id, RegisterProductDto productDto);
         Task<ServiceResponse<bool>> DeleteProductAsync(int id);
     }
 }
