@@ -5,10 +5,6 @@ namespace Pro_Web_API.Core.Entities
 {
     public class Product
     {
-        //[BsonId] // _id alanını manuel kontrol eder.
-        //[BsonRepresentation(BsonType.String)] // ID türünü string olarak belirtir.
-        //public string Id { get; set; } = Guid.NewGuid().ToString();
-
         [BsonId]
         public int Id { get; set; }
         public string Name { get; set; }

@@ -39,7 +39,6 @@ namespace Pro_Web_API.WebAPI.Controllers
             var response = await _categoryService.RegisterAsync(categoryDto);
             if (!response.Success)
             {
-                // Özel hata kodlarına göre yanıt döndür
                 return NotFound(new
                 {
                     success = false,

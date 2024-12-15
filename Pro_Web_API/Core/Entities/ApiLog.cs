@@ -9,8 +9,8 @@
         public string RequestPath { get; set; }
         public DateTime LogTime { get; set; } = DateTime.Now;
         public string Message { get; set; }
-        public string IpAdresss { get; set; } // Kullanıcı rolleri
-        public string Response { get; set; } // API'nin döndürdüğü cevap
+        public string IpAdresss { get; set; }
+        public string Response { get; set; } 
     }
 
 

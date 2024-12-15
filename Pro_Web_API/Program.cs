@@ -31,7 +31,7 @@ builder.Services.AddSwaggerGen(c =>
 
     c.EnableAnnotations();
 
-    // JWT Bearer Security Tanýmý
+
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -98,7 +98,6 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("b1f6c3f8e2d94b5eaef5ac39484c9476"))
     };
 
-    // Özelleþtirilmiþ yanýt için OnChallenge event'i
     options.Events = new JwtBearerEvents
     {
         OnChallenge = async context =>

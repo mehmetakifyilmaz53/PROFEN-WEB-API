@@ -104,8 +104,8 @@ namespace Pro_Web_API.Data.Repositories.Concrete
 
                 var options = new FindOneAndUpdateOptions<BsonDocument>
                 {
-                    ReturnDocument = ReturnDocument.After, // Güncellenmiş belgeyi döner.
-                    IsUpsert = true // Eğer kayıt yoksa oluşturur.
+                    ReturnDocument = ReturnDocument.After,
+                    IsUpsert = true 
                 };
 
                 var result = await _collection.Database

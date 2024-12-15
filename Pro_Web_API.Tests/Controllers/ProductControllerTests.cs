@@ -110,7 +110,7 @@ namespace Pro_Web_API.Tests.Controllers
         [Fact]
         public async Task UpdateProduct_ShouldReturnForbidden_WhenUserIsNotAdminOrManager()
         {
-            MockUserWithRole((int)UserRole.Viewer); // Viewer rolü atanıyor
+            MockUserWithRole((int)UserRole.Viewer); 
 
             var productDto = new RegisterProductDto
             {
@@ -126,7 +126,7 @@ namespace Pro_Web_API.Tests.Controllers
 
             var result = await _controller.UpdateProduct(1, productDto);
 
-            Assert.IsType<ForbidResult>(result); // Yetkisiz erişim sonucu
+            Assert.IsType<ForbidResult>(result); 
         }
 
 

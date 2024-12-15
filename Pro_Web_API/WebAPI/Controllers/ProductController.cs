@@ -36,12 +36,12 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpPost("add")]
-        [Authorize(Roles = "Admin,Manager")] // Admin ve Manager rolleri için erişim
+        [Authorize(Roles = "Admin,Manager")] 
         public async Task<IActionResult> AddProduct([FromBody] RegisterProductDto productDto)
         {
             if (!User.IsInRole("Admin") && !User.IsInRole("Manager"))
             {
-                return Forbid(); // Yeterli yetkiye sahip olmayan kullanıcılar için
+                return Forbid(); 
             }
 
             var result = await _productService.CreateProductAsync(productDto);

@@ -11,7 +11,6 @@ namespace Pro_Web_API.Core.Utilities
                 if (string.IsNullOrWhiteSpace(email))
                     return false;
 
-                // Regex ile e-posta doğrulaması
                 var emailRegex = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.(com|org|net|edu|gov|io)$";
                 return Regex.IsMatch(email, emailRegex);
             }

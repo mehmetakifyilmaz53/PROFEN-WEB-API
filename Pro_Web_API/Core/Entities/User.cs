@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string user_Name { get; set; }
-        public string password_Hash { get; set; } // Hashlenmiş şifre
+        public string password_Hash { get; set; } 
         public string email { get; set; }
         public UserRole role { get; set; }
     }
