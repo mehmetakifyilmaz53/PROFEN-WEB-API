@@ -62,7 +62,7 @@ namespace Pro_Web_API.WebAPI.Controllers
         [SwaggerResponse(429, "Çok fazla istek.")]
         [SwaggerResponse(503, "Hizmet kullanılamıyor. Sunucu geçici olarak kullanılamıyor.")]
         [HttpGet]
-        [Authorize(Roles = "Admin,Manager,Viewer")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllCategories()
         {
             var response = await _categoryService.GetAllCategoriesAsync();

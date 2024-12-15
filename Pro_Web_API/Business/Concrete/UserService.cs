@@ -3,7 +3,7 @@ using Pro_Web_API.Business.Abstract;
 using Pro_Web_API.Core.DTO;
 using Pro_Web_API.Core.Entities;
 using Pro_Web_API.Core.Utilities;
-using Pro_Web_API.Data.Repositories;
+using Pro_Web_API.Data.Repositories.Abstract;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -129,6 +129,7 @@ namespace Pro_Web_API.Business.Concrete
                 }
                 response.Success = true;
                 response.Data = user;
+                response.Message = "Kullanıcı başarıyla getirildi";
             }
 
             catch (AppException ex)
@@ -146,7 +147,7 @@ namespace Pro_Web_API.Business.Concrete
             {
                 response.Data = await _userRepository.GetAllAsync();
                 response.Success = true;
-                response.Message = "Kullanıcılar getirildi.";
+                response.Message = "Kullanıcılar başarıyla listelendi.";
             }
             catch (AppException ex)
             {

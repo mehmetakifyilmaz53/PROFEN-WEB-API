@@ -3,6 +3,66 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\business\\concrete\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\business\\concrete\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\business\\concrete\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\business\\concrete\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\core\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\core\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\core\\dto\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\core\\dto\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\business\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\business\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\webapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\webapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\data\\repositories\\concrete\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\data\\repositories\\concrete\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\data\\repositories\\abstract\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\data\\repositories\\abstract\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\data\\repositories\\abstract\\iapilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\data\\repositories\\abstract\\iapilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\data\\repositories\\concrete\\apilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\data\\repositories\\concrete\\apilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{390C1F22-BBE7-41C5-9135-07AEBCC9D229}|Pro_Web_API.Tests\\Pro_Web_API.Tests.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api.tests\\controllers\\productcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{390C1F22-BBE7-41C5-9135-07AEBCC9D229}|Pro_Web_API.Tests\\Pro_Web_API.Tests.csproj|solutionrelative:pro_web_api.tests\\controllers\\productcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,28 +71,8 @@
       "RelativeMoniker": "D:0:0:{390C1F22-BBE7-41C5-9135-07AEBCC9D229}|Pro_Web_API.Tests\\Pro_Web_API.Tests.csproj|solutionrelative:pro_web_api.tests\\controllers\\usercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\business\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\business\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\core\\utilities\\jwttoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\core\\utilities\\jwttoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|solutionrelative:pro_web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82571A06-C83A-4032-A880-D825EF9C85DC}|Pro_Web_API\\Pro_Web_API.csproj|c:\\users\\administrator\\desktop\\uskon\\profen-web-api\\pro_web_api\\webapi\\middlewares\\customforbiddenmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +86,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\appsettings.json",
+              "RelativeDocumentMoniker": "Pro_Web_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\appsettings.json",
+              "RelativeToolTip": "Pro_Web_API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T11:35:59.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Business\\Concrete\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Business\\Concrete\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Business\\Concrete\\CategoryService.cs",
+              "RelativeToolTip": "Pro_Web_API\\Business\\Concrete\\CategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:26:41.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Business\\Concrete\\UserService.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Business\\Concrete\\UserService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Business\\Concrete\\UserService.cs",
+              "RelativeToolTip": "Pro_Web_API\\Business\\Concrete\\UserService.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAjwIMAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:15:36.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "RelativeToolTip": "Pro_Web_API\\Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:50:03.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "RelativeToolTip": "Pro_Web_API\\Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:49:57.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IApiLogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Abstract\\IApiLogRepository.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Data\\Repositories\\Abstract\\IApiLogRepository.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Abstract\\IApiLogRepository.cs",
+              "RelativeToolTip": "Pro_Web_API\\Data\\Repositories\\Abstract\\IApiLogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:49:52.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApiLogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Concrete\\ApiLogRepository.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Data\\Repositories\\Concrete\\ApiLogRepository.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Data\\Repositories\\Concrete\\ApiLogRepository.cs",
+              "RelativeToolTip": "Pro_Web_API\\Data\\Repositories\\Concrete\\ApiLogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:48:54.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\WebAPI\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Pro_Web_API\\WebAPI\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:48:05.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAQwDoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:19:38.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Core\\DTO\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Core\\DTO\\LoginUserDto.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Core\\DTO\\LoginUserDto.cs",
+              "RelativeToolTip": "Pro_Web_API\\Core\\DTO\\LoginUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:11:03.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Core\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Pro_Web_API\\Core\\Entities\\User.cs",
@@ -63,20 +233,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Core\\DTO\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\Core\\DTO\\UpdateUserDto.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Core\\DTO\\UpdateUserDto.cs",
+              "RelativeToolTip": "Pro_Web_API\\Core\\DTO\\UpdateUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:11:05.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Program.cs",
               "RelativeDocumentMoniker": "Pro_Web_API\\Program.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Program.cs",
               "RelativeToolTip": "Pro_Web_API\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAxAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T10:24:19.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "CustomForbiddenMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Middlewares\\CustomForbiddenMiddleware.cs",
               "RelativeDocumentMoniker": "Pro_Web_API\\WebAPI\\Middlewares\\CustomForbiddenMiddleware.cs",
@@ -89,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "JWTToken.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Core\\Utilities\\JWTToken.cs",
               "RelativeDocumentMoniker": "Pro_Web_API\\Core\\Utilities\\JWTToken.cs",
@@ -102,20 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Pro_Web_API\\WebAPI\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwEYAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T10:19:38.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 15,
               "Title": "ProductControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API.Tests\\Controllers\\ProductControllerTests.cs",
               "RelativeDocumentMoniker": "Pro_Web_API.Tests\\Controllers\\ProductControllerTests.cs",
@@ -128,7 +298,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAAFkAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T09:47:39.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "UserControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API.Tests\\Controllers\\UserControllerTests.cs",
               "RelativeDocumentMoniker": "Pro_Web_API.Tests\\Controllers\\UserControllerTests.cs",
@@ -141,26 +324,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Pro_Web_API\\WebAPI\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAawFoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:47:39.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Business\\Concrete\\ProductService.cs",
               "RelativeDocumentMoniker": "Pro_Web_API\\Business\\Concrete\\ProductService.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\uskon\\PROFEN-WEB-API\\Pro_Web_API\\Business\\Concrete\\ProductService.cs",
               "RelativeToolTip": "Pro_Web_API\\Business\\Concrete\\ProductService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAIAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAYwKsAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T09:37:31.44Z",
               "EditorCaption": ""

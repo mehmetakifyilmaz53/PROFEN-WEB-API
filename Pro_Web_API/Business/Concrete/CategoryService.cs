@@ -2,7 +2,7 @@
 using Pro_Web_API.Core.DTO;
 using Pro_Web_API.Core.Entities;
 using Pro_Web_API.Core.Utilities;
-using Pro_Web_API.Data.Repositories;
+using Pro_Web_API.Data.Repositories.Abstract;
 
 namespace Pro_Web_API.Business.Concrete
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Pro_Web_API.Data.Repositories;
+using Pro_Web_API.Data.Repositories.Abstract;
 using System.Reflection;
 
 namespace Pro_Web_API.WebAPI.Middlewares

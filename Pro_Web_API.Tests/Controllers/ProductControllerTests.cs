@@ -5,7 +5,7 @@ using Pro_Web_API.Business.Abstract;
 using Pro_Web_API.Business.Concrete;
 using Pro_Web_API.Core.DTO;
 using Pro_Web_API.Core.Entities;
-using Pro_Web_API.Data.Repositories;
+using Pro_Web_API.Data.Repositories.Abstract;
 using Pro_Web_API.WebAPI.Controllers;
 using System;
 using System.Collections.Generic;
